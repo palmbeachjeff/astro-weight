@@ -17,11 +17,26 @@ var planets = [
  
   // `.forEach` `document.createElement` `document.getElementById` `.appendChild`
   
-  planets.forEach(calculateWeight)
+var planetDropdown = document.getElementById("planets");
+
+
+
+  planets.forEach(function(item) {
+      var name = item[0];
+      var option = document.createElement("option");
+      option.text = name;
+      option.value = name;
+      planetDropdown.appendChild(option);
+  });
+  
+  
   
   function calculateWeight(weight, planetName) {
      
+    return weight * planets[]
   
+
+      
   }
   
   function handleClickEvent(e) {
